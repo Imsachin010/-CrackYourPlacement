@@ -5,3 +5,14 @@
 // Brute force
 // solving problem with regular quick sort
 
+var removeDuplicates = function(nums) {
+    swapNum = 1;
+
+    for(let i=0; i < nums.length -1; i++){
+        if(nums[i] !== nums[i+1]){
+            nums[swapNum] = nums[i+1];
+            swapNum++;
+        }
+    }
+    return swapNum
+};
