@@ -6,3 +6,19 @@
 // in place solution: keep track of min element and max difference
 // Time complexity: O(n)
 
+var maxProfit = function(prices) {
+    let maxProfit = 0;
+    let l = 0;
+    let r = 1;
+    while( r < prices.length){
+        if(prices[l] < prices[r]){
+            profit = prices[r] - prices[l];
+        maxProfit = Math.max(maxProfit, profit)
+        }else{
+            l = r
+        }
+        r++;
+        
+    }
+    return maxProfit;
+};
