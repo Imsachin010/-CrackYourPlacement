@@ -5,3 +5,15 @@
 // sor the array in ascending order 
 // find the minimum difference between the first and last element of the array
 
+class Solution{
+    findMinDiff(arr,n,m){
+        //code here
+        arr.sort((a, b) => a - b);
+        let minDiff = Infinity;
+        for(let i =0; i+m-1 < n; i++){
+            let diff = arr[i + m - 1] - arr[i];
+            minDiff= Math.min(minDiff,diff )
+        }
+        return minDiff
+    }
+}
