@@ -24,3 +24,5 @@ var subarraysDivByK = function(nums, k) {
     }
     return ans
 };
+
+console.log(subarraysDivByK([4,5,0,-2,-3,1], 5)); // Output: 7
