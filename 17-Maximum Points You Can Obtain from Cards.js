@@ -5,3 +5,21 @@
 
 // solution 
 // Approach 1 - brute force - 2 loops - one for left and one for right
+// Approach 2 - sort the array and then take the sum of first k elements and then keep on adding the last element and removing the first element
+
+var maxScore = function(cardPoints, k) {
+    let lsum = 0;
+    let rsum = 0;
+    for (let i = 0; i < k; i++) {
+        lsum += cardPoints[i];
+    }
+    let maxSum = lsum;
+    for (let i = 0; i < k; i++) {
+        lsum -= cardPoints[k - 1 - i]; 
+        rsum += cardPoints[cardPoints.length - 1 - i]; 
+        maxSum = Math.max(maxSum, lsum + rsum); 
+    }
+
+    return maxSum;
+};
+console.log(maxScore([1,2,3,4,5,6,1],3)); // 12
