@@ -30,3 +30,12 @@ var exist = function(board, word) {
     }
     return false; 
 };
+
+// Example usage:
+let board = [
+    ['A', 'B', 'C', 'E'],
+    ['S', 'F', 'C', 'S'],
+    ['A', 'D', 'E', 'E']
+];
+let word = "ABCCEDFSA";
+console.log(exist(board, word)); // Expected output: true
