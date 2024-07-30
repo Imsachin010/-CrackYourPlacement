@@ -5,3 +5,7 @@
 - Critical Problem solving skills.
 - Logical and Reasoning ability.
 - Around 280 Problems are included.
+
+### Solved Topics 
+- Arrays
+- Strings
