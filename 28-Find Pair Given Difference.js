@@ -24,3 +24,26 @@
 //         }
 //         return -1
 // }}
+// Approach 2 - using set to check value present in array or not
+class Solution {
+    /**
+    * @param number n
+    * @param number x
+    * @param number[] arr
+
+    * @returns number
+    */
+    findPair(n, x, arr) {
+        // code here
+        let set = new Set();
+        for(let i=0; i < n; i++){
+            if(set.has(arr[i] + x) || set.has(arr[i] - x)){
+                return 1
+            }
+            set.add(arr[i]);
+        }
+        return -1
+        
+}
+}
+console.log(new Solution().findPair(5, 10, [40, 30, 100, 90, 20])) // 1
