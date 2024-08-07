@@ -9,3 +9,5 @@
 ### Solved Topics 
 - Arrays
 - Strings
+- Searching & Sorting
+- Matrix
