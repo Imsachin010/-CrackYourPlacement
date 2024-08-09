@@ -4,4 +4,19 @@
 
 // Solution :
 // Approach 1- Iterative
-// Approach 2- 
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var deleteDuplicates = function (head) {
+    let cur = head;
+    while (cur) {
+        while (cur.next && cur.next.val == cur.val) {
+            cur.next = cur.next.next;
+        }
+        cur = cur.next;
+    }
+    return head;
+};
+
+console.log(deleteDuplicates([1, 1, 2])); // [1,2]
