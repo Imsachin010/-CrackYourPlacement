@@ -28,8 +28,10 @@ var mergeTwoLists = function(list1, list2) {
             list2 = list2.next;
         }
     }
-    if(!list1) prev.next = list2;
-    if(!list2) prev.next = list1;
-
+    // if(!list1) prev.next = list2;
+    // if(!list2) prev.next = list1;
+    prev.next = list1 || list2;
     return dummy.next;
 };
+
+console.log(mergeTwoLists([1,2,4], [1,3,4])); // [1,1,2,3,4,4]
