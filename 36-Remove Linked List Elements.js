@@ -3,5 +3,5 @@
 
 // Solution - 
 // Approach 1- Iterate through the nodes and remove the value if it matches with given val
-
+// Approach2 - use dummy node and two pointers to remove the node
 
