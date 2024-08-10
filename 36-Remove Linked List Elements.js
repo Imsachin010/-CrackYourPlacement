@@ -5,3 +5,25 @@
 // Approach 1- Iterate through the nodes and remove the value if it matches with given val
 // Approach2 - use dummy node and two pointers to remove the node
 
+/**
+ * @param {ListNode} head
+ * @param {number} val
+ * @return {ListNode}
+ */
+var removeElements = function(head, val) {
+    let dummy = new ListNode(-1);
+    dummy.next = head;
+    let prev = dummy;
+    let cur = head;
+
+    while(cur){
+        if(cur.val === val){
+            prev.next = cur.next;
+            cur = cur.next
+        }else{
+            prev = cur;
+            cur = cur.next;
+        }
+    }
+    return dummy.next;
+};
