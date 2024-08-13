@@ -45,3 +45,4 @@ var isPalindrome = function (head) {
     return prev;
   }
 };
+console.log(isPalindrome([1, 2, 2, 1]));//true
