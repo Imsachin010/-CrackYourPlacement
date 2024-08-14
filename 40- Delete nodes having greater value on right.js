@@ -3,3 +3,40 @@
 // (Not just the immediate Right, but the entire List on the Right
 
 // Solution
+// Approach 1: traverse each node and check if the next node has a greater value, if yes, delete the next node
+// Approach 2: Reverse the entire LL , finding the current max node and deleting the nodes with lesser value
+
+class Solution {
+    var reverseList = function(head) {
+    let prev = null;
+    let curr = head;
+    let next = null;
+
+    while(curr !== null){
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next
+    }
+    return prev;
+};
+
+    compute(head) {
+        // your code here
+        head = reverseList(head);
+        let maxVal = head.data;
+        let curr = head.next, prev = head;
+        while(curr !== null){
+            if(curr.data >=   maxVal){
+                prev= curr;
+                maxVal = curr.data;
+            }
+            else{
+                prev.next = curr.next;
+            }
+            curr= curr.next;
+        }
+        return reverseList(head)
+    }
+    
+}
