@@ -7,21 +7,8 @@
 // Approach 2: Reverse the entire LL , finding the current max node and deleting the nodes with lesser value
 
 class Solution {
-    var reverseList = function(head) {
-    let prev = null;
-    let curr = head;
-    let next = null;
-
-    while(curr !== null){
-        next = curr.next;
-        curr.next = prev;
-        prev = curr;
-        curr = next
-    }
-    return prev;
-};
-
-    compute(head) {
+    
+    compute(head){
         // your code here
         head = reverseList(head);
         let maxVal = head.data;
@@ -37,6 +24,20 @@ class Solution {
             curr= curr.next;
         }
         return reverseList(head)
+        function reverseList(head) {
+            let prev = null;
+            let curr = head;
+            let next = null;
+        
+            while(curr !== null){
+                next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next
+            }
+            return prev;
+        };
     }
-    
 }
+
+console.log(new Solution().compute([12, 15, 10, 11, 5, 6, 2, 3]).join(' ') === '15 11 6 3');
