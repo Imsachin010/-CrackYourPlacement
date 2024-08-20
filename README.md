@@ -11,3 +11,4 @@
 - Strings
 - Searching & Sorting
 - Matrix
+- Linked List
