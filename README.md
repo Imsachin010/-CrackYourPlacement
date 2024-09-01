@@ -12,3 +12,4 @@
 - Searching & Sorting
 - Matrix
 - Linked List
+- Stack
