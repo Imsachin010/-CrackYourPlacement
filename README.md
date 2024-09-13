@@ -13,3 +13,4 @@
 - Matrix
 - Linked List
 - Stack
+- Queues
