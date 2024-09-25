@@ -14,3 +14,4 @@
 - Linked List
 - Stack
 - Queues
+- Graph
